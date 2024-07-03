@@ -1,0 +1,5 @@
+torch==1.13.0
+torchvision==0.15.2
+timm==0.4.9
+einops==0.6.1
+tensorboard==2.14.0
