@@ -4,7 +4,7 @@ Official implementation and pre-trained models for paper MGC: **"Multi-Grained C
 
 <p align="center"><img src="./images/overview.png" width="100%"  /> </p>
 
-[[Paper](https://arxiv.org/abs/2407.02014)]    [[BibTex](#Citation)]    [[Blog(CN)]()]
+[[Paper](https://arxiv.org/abs/2407.02014)]    [[BibTex](#Citation)]    [[Blog(CN)](https://zhuanlan.zhihu.com/p/708880336)]
 
 MGC is  a novel multi-grained contrast method  for unsupervised representation learning. MGC constructs delicate multi-grained correspondences between positive views and then conduct multi-grained contrast by the correspondences to learn more general unsupervised representations. Without pretrained on large-scale dataset, MGC significantly outperforms the existing state-of-the-art methods on extensive downstream tasks, including object detection, instance segmentation, scene parsing, semantic segmentation and keypoint detection. 
 
@@ -59,8 +59,9 @@ Our method are evaluate on the following downstream tasks, including object dete
 
 step 1. Install mmdetection
 
-```
+```bash
 git clone https://github.com/open-mmlab/mmdetection.git
+cd mmdetection
 git checkout v2.26.0
 ```
 
@@ -89,6 +90,7 @@ step 1. Install mmsegmentation
 
 ```bash
 git clone https://github.com/open-mmlab/mmsegmentation.git
+cd mmsegmentation
 git checkout v0.30.0
 ```
 
@@ -119,6 +121,7 @@ step 1. Install mmpose
 
 ```bash
 git clone https://github.com/open-mmlab/mmpose.git
+cd mmpose
 git checkout v1.2.0
 ```
 
