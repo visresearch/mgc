@@ -9,13 +9,13 @@ def vit_small_pretrain():
         args.nepoch = 800 
         args.batch_size = 256
         args.warmup_epoch = 10
-        args.data_root = '/home/chenjz/dataset/coco_pretrain/'
+        args.data_root = '/path/to/dataset/'
         args.drop_path_rate = 0.05
     elif args.dataset == 'imagenet':
         args.nepoch = 200 
         args.batch_size = 512
         args.warmup_epoch = 30
-        args.data_root = '/dev/shm/ILSVRC2012/train'    
+        args.data_root = '/path/to/dataset/'    
         args.drop_path_rate = 0.1
     args.image_size = 224
     args.patch_size = 16
