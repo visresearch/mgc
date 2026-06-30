@@ -47,9 +47,9 @@ All models are trained on ViT-S/16 for 800 epochs. For detection, segmentation a
 
 | pretrained | checkpoint |
 | :----------------: | :----------------: |
-|  COCO2017  | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/pretrain/coco/small_800ep_coco.pth) |
-|    VOC     | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/pretrain/voc/small_800ep_voc.pth) |
-|   ADE20K   | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/pretrain/ade/small_800ep_ade.pth) |
+|  COCO2017  | [download](https://huggingface.co/visresearch/MGC/blob/main/pretrain/coco/small_800ep_coco.pth) |
+|    VOC     | [download](https://huggingface.co/visresearch/MGC/blob/main/pretrain/voc/small_800ep_voc.pth) |
+|   ADE20K   | [download](https://huggingface.co/visresearch/MGC/blob/main/pretrain/ade/small_800ep_ade.pth) |
 
 ### Evaluation
 
@@ -81,8 +81,8 @@ tools/dist_train.sh configs/mgc/mask_rcnn_vit_small_12_p16_1x_cityscape.py [numb
 
 | pretrained |  finetune  |         arch          | bbox mAP | mask mAP |                          checkpoint                          |
 | :--------: | :--------: | :-------------------: | :------: | :------: | :----------------------------------------------------------: |
-|  COCO2017  | COCO 2017  | ViT-S/16 + Mask R-CNN |   42.0   |   38.0   | [download](/https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmdetection/pretrain_coco_finetune_coco.pth) |
-| COCO 2017  | Cityscapes | ViT-S/16 + Mask R-CNN |   33.2   |   29.4   | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmdetection/pretrain_coco_finetune_cityscapes.pth) |
+|  COCO2017  | COCO 2017  | ViT-S/16 + Mask R-CNN |   42.0   |   38.0   | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmdetection/pretrain_coco_finetune_coco.pth) |
+| COCO 2017  | Cityscapes | ViT-S/16 + Mask R-CNN |   33.2   |   29.4   | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmdetection/pretrain_coco_finetune_cityscapes.pth) |
 
 #### 2. Semantic Segmentation
 
@@ -110,10 +110,10 @@ tools/dist_train.sh configs/mgc/mask_rcnn_vit_small_12_p16_1x_voc.py [number of 
 
 | pretrained | finetune |          arch           | iterations | mIoU |                          checkpoint                          |
 | :--------: | :------: | :---------------------: | :--------: | :--: | :----------------------------------------------------------: |
-| COCO 2017  |  ADE20K  | ViT-S/16 + Semantic FPN |    40k     | 37.7 | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmsegmentation/pretrain_coco_finetune_ade.pth) |
-|   ADE20K   |  ADE20K  | ViT-S/16 + Semantic FPN |    40k     | 31.2 | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmsegmentation/pretrain_ade_finetune_ade.pth) |
-| COCO 2017  |   VOC    | ViT-S/16 + Semantic FPN |    40k     | 64.5 | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmsegmentation/pretrain_coco_finetune_voc.pth) |
-|    VOC     |   VOC    | ViT-S/16 + Semantic FPN |    40k     | 54.5 | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmsegmentation/pretrain_voc_finetune_voc.pth) |
+| COCO 2017  |  ADE20K  | ViT-S/16 + Semantic FPN |    40k     | 37.7 | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmsegmentation/pretrain_coco_finetune_ade.pth) |
+|   ADE20K   |  ADE20K  | ViT-S/16 + Semantic FPN |    40k     | 31.2 | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmsegmentation/pretrain_ade_finetune_ade.pth) |
+| COCO 2017  |   VOC    | ViT-S/16 + Semantic FPN |    40k     | 64.5 | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmsegmentation/pretrain_coco_finetune_voc.pth) |
+|    VOC     |   VOC    | ViT-S/16 + Semantic FPN |    40k     | 54.5 | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmsegmentation/pretrain_voc_finetune_voc.pth) |
 
 #### 3. Keypoint Detection
 
@@ -135,7 +135,7 @@ tools/dist_train.sh configs/mgc/td-hm_ViTPose-small_8xb64-210e_coco-256x192.py [
 
 | pretrained | finetune  |  arch   |  AP  |  AR  |                          checkpoint                          |
 | :--------: | :-------: | :-----: | :--: | :--: | :----------------------------------------------------------: |
-| COCO 2017  | COCO 2017 | ViTPose | 71.6 | 76.9 | [download](https://csueducn-my.sharepoint.com/:u:/r/personal/221258_csu_edu_cn/Documents/OpenSource/mgc_weights/finetune/mmpose/pretrain_coco_finetune_coco.pth) |
+| COCO 2017  | COCO 2017 | ViTPose | 71.6 | 76.9 | [download](https://huggingface.co/visresearch/MGC/blob/main/finetune/mmpose/pretrain_coco_finetune_coco.pth) |
 
 ### Acknowledgement
 
